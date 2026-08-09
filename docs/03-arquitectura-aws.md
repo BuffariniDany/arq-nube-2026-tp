@@ -31,9 +31,4 @@
 
 ## Diagrama
 
-Guardá el diagrama en `diagrams/arquitectura-aws.png`, usando los [íconos oficiales de AWS](https://aws.amazon.com/architecture/icons/)
-en draw.io o Lucidchart. Como mínimo debería mostrar:
-
-- El flujo de un request desde el usuario hasta la base de datos.
-- Los límites de la VPC / subnets públicas y privadas (si las usás).
-- Dónde vive la imagen Docker (ECR) y quién la despliega (ECS).
+![Arquitectura propuesta en AWS](../diagrams/arquitectura-aws.png)
