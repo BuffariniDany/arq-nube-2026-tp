@@ -22,12 +22,11 @@
 
 ## Decisiones para optimizar costos
 
-> ✍️ Completar. Ideas para pensar (no las copies, adaptalas a tu decisión real):
-> - ¿Usarías Fargate Spot para la app, ya que no es un servicio crítico 24/7?
-> - ¿Te alcanza una instancia `db.t4g.micro` de RDS o necesitás algo más grande?
-> - ¿Necesitás Multi-AZ desde el día 1, o lo dejarías para una v2 cuando haya más usuarios?
+> Es importante decidir correctamente el tipo de instancia. 
+>   Alcanza una instancia `db.t4g.micro` de RDS o necesitás algo más grande?
+
 
 ## Qué evitarías o simplificarías en una primera versión
 
-> ✍️ Completar. Por ejemplo: arrancar sin Multi-AZ, sin CDN, con una sola instancia de ECS sin
-> auto scaling, y agregar eso más adelante si el uso lo justifica.
+> en una primer version arranca sin Multi-AZ, sin CDN, con una sola instancia de ECS sin
+> auto scaling. Se agrega en una siguiente version si el uso lo justifica.
