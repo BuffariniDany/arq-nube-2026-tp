@@ -43,7 +43,7 @@ Esta es un app personal, de un solo usuario para llevar el registro de mis pract
 
 ## Base de datos
 
-** PostgreSQL **
+**PostgreSQL**
 
 Esquema (una sola tabla):
 
