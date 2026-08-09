@@ -28,15 +28,19 @@ AWS cobra Fargate por vCPU y memoria utilizados; para us-east-1, los precios pub
 
 | Servicio                      | Supuesto                  |   USD/mes aprox. |
 | ----------------------------- | ------------------------- | ---------------: |
-| **ECS Fargate**               | 0,25 vCPU + 0,5 GB, 24/7  |        **$9,01** |
+| **ALB ** — Cargo por hora     |	730 hrs × $0.0225/hr	    |  $16.43          |
 | **RDS PostgreSQL**            | `db.t4g.micro`, Single-AZ |       **$11,68** |
+| **ECS Fargate** |vCPU	0.25 vCPU × 730 hrs × $0.04048/hr	|          $7.39   |
+| **ECS Fargate** |Memoria	0.5 GB × 730 hrs × $0.004445/hr	|          $1.62   |
 | RDS Storage                   | 20 GB gp3                 |        **$2,30** |
 | **Application Load Balancer** | 730 h + ~1 LCU            |       **$22,27** |
 | IPv4 públicas del ALB         | 2 × $0,005/h              |        **$7,30** |
 | **ECR**                       | 1 GB                      |        **$0,10** |
 | **Secrets Manager**           | 1 secret                  |        **$0,40** |
 | **CloudWatch**                | ~1 GB logs                |        **$0,50** |
-| **TOTAL**                     |                           | **≈ $53,56/mes** |
+| **TOTAL**                     |                           | **≈ $40,45/mes** |
+
+
 
 ## Servicios más costosos de tu arquitectura
 
