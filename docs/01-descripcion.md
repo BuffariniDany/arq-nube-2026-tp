@@ -55,7 +55,8 @@ CREATE TABLE tasks (
 );
 ```
 
-Los datos son estructurados y con esquema fijo. Una tarea tiene id, description, completed — no hay campos variables ni anidados, así que no necesitás la flexibilidad de un documento (Mongo/DynamoDB).
+Los datos son estructurados y con esquema fijo. 
+Una tarea tiene id, description, completed — no hay campos variables ni anidados, así que no necesitás la flexibilidad de un documento (Mongo/DynamoDB).
 No hay relaciones complejas hoy, pero podría haberlas. Si en el futuro se agregan usuarios, categorías o etiquetas a las tareas, una base relacional te permite modelarlo con JOINs y foreign keys sin reestructurar todo — algo que en NoSQL requiere pensar el modelo de datos distinto desde el principio.
 Necesito consistencia fuerte. Al marcar una tarea como completada o se la elimina, importa que esa escritura sea inmediata y consistente (ACID) — no hay tolerancia a "eventual consistency" en una lista de tareas (si esta marcada completada y todavía se ve como pendiente un segundo después, es un bug, no un detalle menor).
 El volumen y la concurrencia son bajos. No hay necesidad de escalado horizontal masivo ni de particionar datos entre múltiples nodos — el motivo típico para elegir NoSQL (escala horizontal) no aplica acá.
