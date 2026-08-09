@@ -1,6 +1,6 @@
 # 05 · Estimación de costos
 
-> ✍️ Uso: [AWS Pricing Calculator](https://calculator.aws/) con los servicios que elegiste en
+> ✍️ Uso: [AWS Pricing Calculator](https://calculator.aws/) con los servicios descriptos en
 > `03-arquitectura-aws.md` .
 
 ## Estimación mensual (borrador)
