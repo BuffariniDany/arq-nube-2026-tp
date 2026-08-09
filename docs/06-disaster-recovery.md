@@ -19,7 +19,7 @@ Borrado accidental de datos (ej: un DELETE sin WHERE corriendo una migración a 
 Error humano en un deploy que rompa la imagen de la app: lo mitigaría manteniendo la versión anterior de la imagen en ECR para poder hacer rollback rápido.
 
 **RTO (Recovery Time Objective):** 
-Definí= "4 horas". — porque al ser la única usuaria, tolero estar sin acceso a la app por un tiempo razonable sin que eso tenga consecuencias reales.
+Definí= "4 horas". Porque al ser la única usuaria, tolero estar sin acceso a la app por un tiempo razonable sin que eso tenga consecuencias reales.
 
 **RPO (Recovery Point Objective):** 
 
