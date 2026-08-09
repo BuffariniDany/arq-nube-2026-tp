@@ -21,8 +21,7 @@
 
 ## Decisiones para optimizar costos
 
-> Es importante decidir correctamente el tipo de instancia. En este caso.
->   Alcanza una instancia `db.t4g.micro` de RDS.
+> Es importante decidir correctamente el tipo de instancia. Con una instancia `db.t4g.micro` de RDS alcanza.
 
 
 ## Qué evitarías o simplificarías en una primera versión
