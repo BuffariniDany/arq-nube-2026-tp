@@ -5,9 +5,9 @@
 
 | Servicio                     | Para qué serviría                                            |
 | ----------------------------- | -------------------------------------------------------------- |
-| **Amazon ECR**                | Guardar la imagen Docker de la app (la que construye tu `Dockerfile`) |
-| **Amazon ECS (Fargate)**      | Correr el contenedor de la app sin administrar servidores      |
-| **Amazon RDS for PostgreSQL** | Reemplazo administrado del contenedor `db` de tu `docker-compose.yml` |
+| **Amazon ECR**                | Guarda la imagen Docker de la app (la que construye tu `Dockerfile`) |
+| **Amazon ECS (Fargate)**      | para correr el contenedor de la app sin administrar servidores      |
+| **Amazon RDS for PostgreSQL** | Reemplazo administrado del contenedor `db` de mi `docker-compose.yml` |
 | **Application Load Balancer** | Recibir el tráfico HTTP y repartirlo entre las tareas de ECS   |
 | **Amazon Route 53**           | DNS — apuntar un dominio al Load Balancer                       |
 | **AWS Certificate Manager**   | Certificado TLS/HTTPS para el dominio                           |
