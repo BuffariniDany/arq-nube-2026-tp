@@ -11,7 +11,7 @@ La app corre con **Docker Compose**, con dos contenedores:
 
 ## Cómo se conectan
 
-<img width="931" height="292" alt="image" src="https://github.com/user-attachments/assets/b10ac946-098c-4032-9629-cb4f4a47af03" />
+
 
 ```
 
