@@ -17,10 +17,13 @@ La app corre con **Docker Compose**, con dos contenedores:
 
 >  `app` depende de `db` (`depends_on` con `condition: service_healthy`): no arranca hasta que
   Postgres esté listo para aceptar conexiones (`pg_isready`).
+> 
 >  `app` se conecta a `db` por el nombre del servicio (`db`), resuelto por la red interna que
   crea Docker Compose automáticamente — no hace falta configurar nada de networking a mano.
+> 
 >  Los datos de Postgres persisten en un **volumen nombrado** (`db_data`), así que sobreviven a
   un `docker compose down` (se pierden solo con `docker compose down -v`).
+> 
 >  El esquema de la tabla `tasks` se crea automáticamente la primera vez que se inicializa el
   volumen de Postgres, montando el `.sql` de migración en `/docker-entrypoint-initdb.d/`.
 
