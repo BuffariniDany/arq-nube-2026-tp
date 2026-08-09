@@ -1,8 +1,7 @@
 # 05 · Estimación de costos
 
-> ✍️ Usá la [AWS Pricing Calculator](https://calculator.aws/) con los servicios que elegiste en
-> `03-arquitectura-aws.md` y completá esta tabla con tus propios números. Los valores de acá son
-> solo placeholders de ejemplo, no está actualizados con tarifas reales — reemplazalos.
+> ✍️ Uso: [AWS Pricing Calculator](https://calculator.aws/) con los servicios que elegiste en
+> `03-arquitectura-aws.md` .
 
 ## Estimación mensual (borrador)
 
@@ -22,8 +21,8 @@
 
 ## Decisiones para optimizar costos
 
-> Es importante decidir correctamente el tipo de instancia. 
->   Alcanza una instancia `db.t4g.micro` de RDS o necesitás algo más grande?
+> Es importante decidir correctamente el tipo de instancia. En este caso.
+>   Alcanza una instancia `db.t4g.micro` de RDS.
 
 
 ## Qué evitarías o simplificarías en una primera versión
