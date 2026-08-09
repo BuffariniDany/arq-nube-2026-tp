@@ -1,10 +1,5 @@
 # 03 · Propuesta de arquitectura en AWS
 
-> ⚠️ **La justificación de cada servicio tiene que ser tuya.** Acá te dejo una posible
-> combinación de servicios típica para este tipo de app (contenedor web + base de datos
-> relacional), a modo de punto de partida. Elegí los que realmente entiendas y podés explicar
-> con tus palabras — no hace falta que uses todos los que aparecen acá, y podés reemplazarlos
-> por otros que te parezcan mejores.
 
 ## Servicios candidatos
 
