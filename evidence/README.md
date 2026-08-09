@@ -1,4 +1,4 @@
-Guardá acá:
+** Evidencias del funcionamiento de la app Actix Todo **
 
 - `app-running.png` — screenshot de la app corriendo tras `docker compose up` (mostrando
   `http://localhost:10000` en el navegador, idealmente con alguna tarea ya cargada).
