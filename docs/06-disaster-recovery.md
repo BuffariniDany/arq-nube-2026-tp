@@ -1,53 +1,34 @@
 # 06 · Pensamiento arquitectónico y Disaster Recovery
 
-> ⚠️ Esta es la sección con más peso (25%) y la que más tiene que reflejar tu propio análisis.
-> Te dejo la estructura y preguntas del enunciado, con algunas pistas específicas de esta app,
-> pero las respuestas y las decisiones (RTO/RPO, estrategia de DR) tenés que definirlas vos en
-> base a lo que respondiste en `01-descripcion.md` sobre los usuarios.
+
 
 ## Usuarios y disponibilidad
 
-- ¿Quiénes usan la app? (depende de lo que definiste en `01-descripcion.md`)
-- ¿En qué horarios la usan? → ¿cuándo podés hacer mantenimiento sin impacto?
-- ¿Qué pasa si la app cae en horario pico? ¿Cuál es el impacto real?
-
-> ✍️ Completar. Pensalo en función de si elegiste usuarios internos (impacto = gente de la
-> empresa no puede gestionar sus tareas, molesto pero no catastrófico) vs. público general.
+Soy la única usuaria de esta app — la uso para llevar el registro de mis prácticas de Rust. No hay un "horario pico" real, porque no depende de terceros: el impacto de una caída depende únicamente de cuándo yo la esté usando en ese momento. Puedo hacer mantenimiento en cualquier horario sin afectar a nadie más. Si la app cae, el impacto real es bajo: pierdo acceso temporal a mi lista de tareas, pero no hay pérdida de negocio ni afecta a otros usuarios.
 
 ## Riesgos y reglas
 
-- ¿Qué reglas o regulaciones afectan a tu app? (privacidad de datos, compliance, etc.)
-- ¿Qué riesgos técnicos o de negocio identificás?
-
-> ✍️ Completar. Para una to-do list simple, pensá si hay datos sensibles (¿las descripciones de
-> tareas podrían contener información personal o confidencial?) y qué implicancias tiene eso.
+No manejo datos de terceros ni información sujeta a compliance (no es una app comercial). El riesgo que sí identifico es técnico: perder el historial de mis prácticas si la base de datos se corrompe o se borra por error. No planeo cargar información sensible (contraseñas, datos personales de otros) en las descripciones de las tareas, así que el riesgo de exposición de datos es bajo.
 
 ## Plan de recuperación
 
-**Escenarios de falla a contemplar** (pensalos para tu arquitectura de AWS, no la local):
+**Escenarios de falla a contemplar** 
 
-- Caída de una Availability Zone completa.
-- Corrupción o borrado accidental de datos (ej: alguien corre un `DELETE` sin `WHERE`).
-- Error humano en un deploy (ej: se rompe la imagen de la app y no arranca ningún contenedor).
+Caída de una Availability Zone: al ser una app de bajo tráfico, no justifica tener redundancia Multi-AZ activa; toleraría el tiempo de restauración de un snapshot.
+Borrado accidental de datos (ej: un DELETE sin WHERE corriendo una migración a mano): lo mitigaría con snapshots automáticos diarios de RDS.
+Error humano en un deploy que rompa la imagen de la app: lo mitigaría manteniendo la versión anterior de la imagen en ECR para poder hacer rollback rápido.
 
-> ✍️ Completar: elegí 2 o 3 escenarios concretos y explicá qué pasaría y cómo lo mitigarías.
+**RTO (Recovery Time Objective):** 
+Definí= "4 horas". — porque al ser la única usuaria, tolero estar sin acceso a la app por un tiempo razonable sin que eso tenga consecuencias reales.
 
-**RTO (Recovery Time Objective):** ¿cuánto tiempo podés estar caída?
+**RPO (Recovery Point Objective):** 
 
-> ✍️ Completar con un número concreto (ej: "30 minutos" o "4 horas") y la justificación de por
-> qué ese número tiene sentido para tus usuarios.
+Con backups diarios de RDS, perder como máximo un día de tareas cargadas es aceptable para mi caso de uso.
 
-**RPO (Recovery Point Objective):** ¿cuántos datos podés perder?
+**Estrategia de DR:** Backup & Restore 
 
-> ✍️ Completar (ej: "hasta 1 hora de datos" si hacés backups horarios de RDS).
-
-**Estrategia de DR:** Backup & Restore / Pilot Light / Warm Standby / Multi-Site
-
-> ✍️ Completar y justificar cuál elegiste. Para una app de este tamaño y criticidad, probablemente
-> **Backup & Restore** sea razonable (es la más económica) — pero justificá vos por qué, o por
-> qué elegirías otra.
+Backup & Restore. La elijo porque es la más económica y el impacto de una caída es exclusivamente para mí — no hay justificación de negocio para pagar por Pilot Light o Warm Standby en una app personal de práctica.
 
 **¿Cómo harías backups?**
 
-> ✍️ Completar. Pistas: snapshots automáticos de RDS, retención (¿cuántos días?), si los
-> replicarías a otra región.
+Usaría los snapshots automáticos de RDS, con una retención corta (ej: 7 días). No replicaría a otra región, porque el valor de los datos no justifica ese costo adicional.
