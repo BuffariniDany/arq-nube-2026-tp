@@ -42,12 +42,9 @@ AWS cobra Fargate por vCPU y memoria utilizados; para us-east-1, los precios pub
 ## Servicios más costosos de tu arquitectura
 
 El ALB es relativamente caro para una aplicación diminuta:
-Fargate       ≈ $9
-RDS           ≈ $14
-ALB + IPv4    ≈ $30
-Otros         ≈ $1
---------------------
-Total         ≈ $54/mes
+Es decir, más de la mitad del costo está en ALB + IPv4, no en ECS ni RDS.
+Aun con poco tráfico, el ALB está encendido 24/7. 
+AWS cobra sus horas de funcionamiento independientemente de que reciba pocas solicitudes.
 
 ## Decisiones para optimizar costos
 
