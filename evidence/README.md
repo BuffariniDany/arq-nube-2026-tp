@@ -5,4 +5,4 @@ Guardá acá:
 - `linkedin-post.png` — screenshot del post publicado en LinkedIn (ver el texto sugerido en el
   README principal de `Entregables/`).
 
-Podés borrar este README una vez que subas las evidencias.
+
