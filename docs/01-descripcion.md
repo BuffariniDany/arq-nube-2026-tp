@@ -1,9 +1,5 @@
 # 01 · Descripción de la app
 
-> ⚠️ **Esta sección tiene que ser tuya.** Lo que sigue es un esqueleto con la info técnica objetiva
-> de la app (para que no la tengas que ir a buscar) y preguntas guía. Las respuestas a "por qué la
-> elegiste" y "quiénes son los usuarios" las tenés que escribir vos, con tu propio criterio.
-
 ## ¿Qué hace la app?
 
 Es una **lista de tareas (to-do list)** web, hecha en Rust:
@@ -31,13 +27,16 @@ render es server-side con templates de Tera.
 (fork del ejemplo oficial de `actix/examples`), licencia MIT.
 
 ## ¿Por qué la elegiste?
+Estoy practicando aprende Rust de forma autodidacta porque me interesa el diseño de software bajo principios SOLID:
+| Letra | Principio                     | En inglés                                 | Idea principal                                                                                      |
+| ----- | ----------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **S** | **Responsabilidad Única**     | **Single Responsibility Principle (SRP)** | Una clase debe tener **una sola razón para cambiar**.                                               |
+| **O** | **Abierto/Cerrado**           | **Open/Closed Principle (OCP)**           | El software debe estar **abierto a extensión, pero cerrado a modificación**.                        |
+| **L** | **Sustitución de Liskov**     | **Liskov Substitution Principle (LSP)**   | Una subclase debe poder **sustituir a su clase base** sin romper el comportamiento esperado.        |
+| **I** | **Segregación de Interfaces** | **Interface Segregation Principle (ISP)** | Es mejor tener **interfaces pequeñas y específicas** que una interfaz grande y general.             |
+| **D** | **Inversión de Dependencias** | **Dependency Inversion Principle (DIP)**  | Los módulos de alto nivel no deben depender de detalles; ambos deben depender de **abstracciones**. |
 
-> ✍️ **Completar.** Ideas para pensar la respuesta (no copies esto tal cual, es solo para
-> orientarte):
-> - ¿Te interesa Rust como lenguaje / querías ver un ejemplo real de backend en Rust?
-> - ¿Te resultó útil por ser chica y simple, y así poder enfocarte en la parte de arquitectura
->   más que en pelear con el código?
-> - ¿Pensás usar algo similar (gestión de tareas/estado) como base de alguna idea propia?
+
 
 ## ¿Quiénes son los usuarios?
 
