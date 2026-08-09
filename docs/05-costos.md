@@ -1,7 +1,9 @@
 # 05 · Estimación de costos
 
-> ✍️ Uso: [AWS Pricing Calculator](https://calculator.aws/) con los servicios descriptos en
+Uso: [AWS Pricing Calculator](https://calculator.aws/) con los servicios descriptos en
 > `03-arquitectura-aws.md` .
+
+**Costo estimado:** aproximadamente USD 54/mes, considerando una única tarea ECS Fargate ejecutándose 24/7, una instancia RDS PostgreSQL db.t4g.micro Single-AZ con 20 GB gp3, un Application Load Balancer, ECR, Secrets Manager y un volumen bajo de logs en CloudWatch. La estimación corresponde a precios On-Demand de us-east-1 y no contempla NAT Gateway, transferencia significativa de datos ni impuestos.
 
 ## Estimación mensual (borrador)
 
