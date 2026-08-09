@@ -55,7 +55,7 @@ AWS cobra sus horas de funcionamiento independientemente de que reciba pocas sol
 > en una primer version arranca sin Multi-AZ, sin CDN, con una sola instancia de ECS sin
 > auto scaling. Se agrega en una siguiente version si el uso lo justifica.
 
-## Ejercicio con estimacion con Amazon Q 
+## Ejercicio: estimacion con Amazon Q 
 
 ![Amazon Q Cost Explorer](../diagrams/AmazonQ%20Cost%20explorer.png)
 
