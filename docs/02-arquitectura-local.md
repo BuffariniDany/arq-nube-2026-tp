@@ -11,7 +11,7 @@ La app corre con **Docker Compose**, con dos contenedores:
 
 ## Cómo se conectan
 
-
+![Diagrama de cómo se conectan los contenedores](como%20se%20conectan.png)
 
 ```
 
