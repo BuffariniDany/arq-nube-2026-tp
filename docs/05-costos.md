@@ -23,7 +23,7 @@ tráfico muy bajo
 sin NAT Gateway
 730 horas/mes
 
-AWS cobra Fargate por vCPU y memoria utilizados; para us-east-1, los precios publicados son $0,000011244 por vCPU-segundo y $0,000001235 por GB-segundo para Linux/x86.
+AWS cobra Fargate por vCPU y memoria utilizados; para us-east-1, los precios publicados son $0,000011244 por vCPU-segundo y $0,000001235 por GB-segundo para Linux/x86
 
 ## Ejercicio de Estimación mensual
 
