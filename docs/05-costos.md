@@ -57,11 +57,6 @@ AWS cobra sus horas de funcionamiento independientemente de que reciba pocas sol
 
 ## Ejercicio: estimacion con Amazon Q 
 
-```markdown
-![Amazon Q Cost Explorer](../diagrams/AmazonQ%20Cost%20explorer%201.png)
-```
-```markdown
-![Amazon Q Cost Explorer](../diagrams/AmazonQ%20Cost%20explorer%202.png)
-```
+
 
 
