@@ -11,19 +11,8 @@ La app corre con **Docker Compose**, con dos contenedores:
 
 ## Cómo se conectan
 
-```
-┌─────────────┐        HTTP :10000        ┌──────────────┐
-│  Navegador  │ ─────────────────────────▶ │   app (Rust)  │
-└─────────────┘                            │  Actix-web    │
-                                            └───────┬───────┘
-                                                    │ TCP :5432
-                                                    │ postgres://todo:todo@db:5432/actix_todo
-                                                    ▼
-                                            ┌───────────────┐
-                                            │  db (Postgres)│
-                                            │   volumen:    │
-                                            │   db_data     │
-                                            └───────────────┘
+<img width="931" height="292" alt="image" src="https://github.com/user-attachments/assets/b10ac946-098c-4032-9629-cb4f4a47af03" />
+
 ```
 
 - `app` depende de `db` (`depends_on` con `condition: service_healthy`): no arranca hasta que
