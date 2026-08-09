@@ -21,7 +21,6 @@ tráfico muy bajo
 1 secret
 ~1 GB/mes de logs de CloudWatch
 sin NAT Gateway
-730 horas/mes
 
 AWS cobra Fargate por vCPU y memoria utilizados; para us-east-1, los precios publicados son $0,000011244 por vCPU-segundo y $0,000001235 por GB-segundo para Linux/x86
 
