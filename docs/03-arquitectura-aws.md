@@ -1,7 +1,7 @@
 # 03 · Propuesta de arquitectura en AWS
 
 
-## Servicios candidatos
+## Servicios utilizados en la solucion de arquictectura
 
 | Servicio                     | Para qué serviría                                            |
 | ----------------------------- | -------------------------------------------------------------- |
